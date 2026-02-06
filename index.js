@@ -104,6 +104,11 @@ const server = http.createServer(async (req, res) => {
         })
         res.end('Internal Server Error')
       }
+    } else if (pathname === '/') {
+      res.writeHead(302, {
+        Location: 'https://luxmiyu.com/tetobooru',
+      })
+      res.end()
     } else {
       res.writeHead(404, { 'Content-Type': 'text/plain' })
       res.end('Invalid URL format')
