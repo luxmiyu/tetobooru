@@ -1,0 +1,27 @@
+{
+  "name": "tetobooru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxmiyu/tetobooru.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/luxmiyu/tetobooru/issues"
+  },
+  "homepage": "https://github.com/luxmiyu/tetobooru#readme",
+  "devDependencies": {
+    "prettier": "3.8.1"
+  },
+  "dependencies": {
+    "canvas": "^3.2.1"
+  }
+}
