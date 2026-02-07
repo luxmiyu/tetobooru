@@ -79,7 +79,7 @@ const server = http.createServer(async (req, res) => {
     const url = new URL(req.url, `http://${req.headers.host}`)
     const pathname = url.pathname
 
-    const match = pathname.match(/^\/([0-9]+x[0-9]+)\/([a-zA-Z.]+)$/)
+    const match = pathname.match(/^\/([0-9]+x[0-9]+)\/([.ijlosztg]+)$/)
     if (match) {
       const dimensions = match[1]
       const minos = match[2]
