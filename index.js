@@ -86,7 +86,10 @@ const server = http.createServer(async (req, res) => {
 
       const scale = parseFloat(url.searchParams.get('scale') ?? 1)
 
-      const [w, h] = dimensions.split('x').map(Number)
+      const [w, h] = dimensions
+        .split('x')
+        .map(Number)
+        .map((n) => Math.min(512, Math.max(1, n)))
 
       try {
         const buffer = await generateCanvasBuffer(w, h, minos, scale)
