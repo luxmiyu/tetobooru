@@ -84,7 +84,7 @@ const server = http.createServer(async (req, res) => {
       const dimensions = match[1]
       const minos = match[2]
 
-      const scale = parseFloat(url.searchParams.get('scale') ?? 1)
+      const scale = Math.max(1, Math.min(64, parseFloat(url.searchParams.get('scale') ?? 1)))
 
       const [w, h] = dimensions
         .split('x')
